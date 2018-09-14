@@ -1,0 +1,539 @@
+/* //公用样式 */
+.go{
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 999;
+}
+.more{
+    position: fixed;
+    right: 60px;
+    bottom: 90px;
+    z-index: 999;
+    animation:more 0.6s linear infinite alternate;
+} 
+@keyframes more {
+  0%{
+     transform: translateY(-10px);
+  }
+ 
+   100%{
+       transform: translateY(10px);
+   }
+}
+.qbh-title {
+   background-image: url("../images/01-bg.png");
+   background-position: center bottom;
+   background-repeat: no-repeat;
+   
+}
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height:100% ;
+}
+.qbh-title-fly {
+    position: absolute;
+    bottom: 570px;
+    left: 550px;  
+    animation: fly 3s linear infinite;
+}
+@keyframes fly{
+    0%{
+       bottom: 520px;
+    }
+     50%{
+        bottom: 570px;
+     }
+      100%{
+           bottom: 520px;
+      }
+}
+.qbh-title-sofa {
+    position: absolute; 
+    left: 400px;
+    bottom: 360px;
+    animation: sofa 2s linear infinite;
+}
+@keyframes sofa{
+    0%{
+       bottom: 320px;
+    }
+     50%{
+       bottom: 360px;
+     }
+      100%{
+           bottom: 320px;
+      }
+}
+.qbh-title-goods {
+    position: absolute; 
+    left: 50%;
+    bottom: 155px;
+     transform: translateX(-50%);
+}
+/* 第二屏 */
+/* .qbh-list {
+  background-image: url("../images/02-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+} */
+.qbh-list .container {
+  background-image: url("../images/02-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.qbh-list-tips {
+  position: absolute;
+  bottom: 540px;
+  left: 50%;
+  margin-left: -182px;
+  width: 364px;
+  height: 28px;
+  overflow: hidden;
+}
+
+/* absolute 相对的是除了static之外的定位父级 */
+.qbh-list-initsearch {
+  display: none;
+  position: absolute;
+  bottom: 280px;
+  right: 40px;
+  width: 222px;
+  height: 45px;
+}
+
+.qbh-list-initsearch img:last-child {
+  position: absolute;
+  top: 2px;
+  right: 30px;
+  opacity: 0;
+}
+
+
+.qbh-list-finishsearch {
+  display: none;
+  position: absolute;
+  bottom: 280px;
+  left: 500px;
+}
+
+.qbh-list-sofas {
+  position: absolute;
+  right: 380px;
+  bottom: 210px;
+  width: 0px;
+}
+.qbh-list-dropsofa {
+  display: none;
+  position: absolute;
+  bottom: 340px;
+  left: 493px;
+  width: 101px;
+  z-index: 10;
+}
+
+/* 第三屏 */
+/* 规范: BEM 类名规范
+         
+*/
+/* .qbh-buy {} */
+
+.qbh-buy-main {
+  position: absolute;
+  left: 50%;
+  /* 用transform会影响z-index层级 */
+  /* transform: translateX(-50%); */
+  margin-left: -495px;
+  bottom: 0;
+  width: 990px;
+  height: 600px;
+  background-image: url("../images/03-bg.png");
+}
+
+.qbh-buy-main [class*="select"] {
+  position: absolute;
+  top: 308px;
+  left: 533px;
+}
+
+.qbh-buy-main img {
+  margin-bottom: 30px;
+}
+
+.qbh-buy-main div:nth-child(2) {
+  display: none;
+}
+
+.qbh-buy-dropsofa {
+  display: none;
+  position: absolute;
+  bottom: 200px;
+  right: 520px;
+  /* 以下加了z-index 也没有用
+  你们认为z-index 和transform 有没有关系
+  transform会改变z-index的层级
+  */
+  z-index: 8;
+}
+
+/* 第四屏 */
+.qbh-info {
+  background-image: url("../images/04-bg.png");
+  background-repeat: no-repeat;
+   background-position: center bottom;
+}
+
+.qbh-info-cloud {
+  position: absolute;
+  bottom: 520px;
+  left: 50%;
+  transform: translate(-50%);
+
+  animation: cloudMove 50s linear infinite;
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translate(-50%)
+  }
+  50% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(-50%)
+  }
+}
+
+.qbh-info-tips {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 480px;
+  width: 430px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.qbh-info-tips img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.qbh-info-tips img:last-child {
+  opacity: 0;
+}
+
+.qbh-info-cart {
+  position: absolute;
+  bottom: 50px;
+  right: 490px;
+  width: 407px;
+  height: 346px;
+}
+
+.qbh-info-cart img:first-child {
+  position: relative;
+  z-index: 10;
+}
+
+.qbh-info-cart img:last-child {
+  display: none;
+  position: absolute;
+  top: -42px;
+  right: 65px;
+}
+
+.qbh-info-profile {
+  position: absolute;
+  left: 50%;
+  margin-left: -142px;
+  bottom: 180px;
+  width: 284px;
+  height: 270px;
+  opacity: 0;
+}
+
+.qbh-info-profile img:last-child {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+/* 第五屏 */
+.qbh-payment {
+  background-image: url('../images/05-bg.png');
+}
+.qbh-payment-tips {
+  position: absolute;
+  left:140px;
+  bottom:610px ;
+  z-index: 2;
+}
+.qbh-payment-dropsofa {
+  position: absolute;
+  left:240px ;
+  bottom:495px ;
+  display: none;
+}
+.qbh-payment-cards {
+  position: absolute;
+  bottom:210px ;
+  left: 140px;
+  width:358px ;
+  height:221px ;
+}
+.qbh-payment-cards img:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  left:110px;
+}
+.qbh-payment-cards img:nth-child(2) {
+  position: relative;
+  z-index: 10;
+}
+.qbh-payment-cards img:nth-child(3) {
+  position: absolute;
+  top: 60px;
+  left:60px;
+}
+.qbh-payment-mouse {
+  position: absolute;
+  bottom: 200px;  bottom: 200px;
+  right: 170px;
+  width: 205px;
+  height: 819px;
+}
+.qbh-payment-mouse img{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.qbh-payment-mouse img:last-child{
+  display: none;
+}
+.qbh-payment-hand {
+  position: absolute;
+  bottom: 0;
+  right: 227px;
+  width: 170px;
+  height: 375px;
+  overflow: hidden;
+}
+.qbh-payment-hand img{
+  position: absolute;
+  top:100px;
+  left:0;
+}
+.qbh-payment-smallsofa {
+  display: none;
+  position: absolute;
+  bottom: 93px;
+  left: 200px;
+  z-index: 4;
+}
+/* 第六屏 */
+.qbh-delivery {
+  background-image: url('../images/06-bg.png');
+  background-position-x: 25px;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+
+}
+.qbh-delivery-cloud {
+  position: absolute;
+  bottom: 485px;
+  left: 0;
+  width: 100%;
+  height: 184px;
+}
+.qbh-delivery-cloud img:first-child{
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: firstMove 50s linear infinite;
+}
+@keyframes firstMove {
+  0%{
+    left: -500px;
+  }
+  50%{
+    left: 0;
+  }
+  100%{
+    left: -500px;
+  }
+}
+.qbh-delivery-cloud img:last-child{
+  position: absolute;
+  top: 50px;
+  left: 480px;
+  animation: secondMove 45s linear infinite;
+}
+@keyframes secondMove  {
+  0%{
+    left: -200px;
+  }
+  50%{
+    left: 480px;
+  }
+  100%{
+    left: -200px;
+  }
+}
+.qbh-delivery-box {
+  position: absolute;
+  bottom:300px ;
+  left: 30px;
+  z-index:5 ;
+  display: none;
+}
+.qbh-delivery-truck {
+  position: absolute;
+  left: 400px;
+  bottom: 0;
+  width:221px ;
+  height:122px ;
+}
+.qbh-delivery-truck img :first-child{
+  position: relative;
+  z-index: 10;
+}
+.qbh-delivery-truck img:last-child{
+  display: none;
+  position: absolute;
+  top: -55px;
+  left: 150px;
+}
+
+.qbh-delivery-tips {
+  width:308px ;
+  height:59px ;
+  position: absolute;
+  bottom: 425px;
+  left:340px ;
+  overflow: hidden;
+}
+.qbh-delivery-tips img{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.qbh-delivery-tips img:last-child{
+  opacity: 0;
+}
+.qbh-delivery-man {
+  position: absolute;
+  bottom: 40px;
+  right: 590px;
+  height: 40px;
+}
+.qbh-delivery-door {
+  position: absolute;
+  display: none;
+  bottom: 116px;
+  right: 201px;
+}
+.qbh-delivery-buyer {
+  position: absolute;
+  right: 270px;
+  bottom: 116px;
+  height: 0;
+}
+.qbh-delivery-shouhuo {
+  position: absolute;
+  right: 370px;
+  bottom: 390px;
+  display: none;
+}
+/* 第七屛 */
+.qbh-appraise {
+  background-image: url('../images/07-bg.png');
+  background-position: center bottom;
+}
+.qbh-apprise-main {
+  position: absolute;
+  bottom: 363px;
+  left: 263px;
+  width: 188px;
+  height: 112px;
+}
+
+.qbh-apprise-main-star {
+  position: absolute;
+  top: 17px;
+  left: 44px;
+  width: 0px;
+  /* width: 99px; */
+  height: 16px;
+  overflow: hidden;
+}
+
+.qbh-apprise-main-star.active {
+  animation: star 2.5s steps(5) forwards;
+}
+
+@keyframes star {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 99px;
+  }
+}
+
+.qbh-apprise-main-star img {
+  margin-right: 3px;
+}
+
+.qbh-appraise-haoping {
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 50px;
+  width: 1px;
+  height: 40px;
+}
+/* 第八屛 */
+.qbh-shopping {
+  background-image: url("../images/08-bg.png");
+}
+.qbh-shopping-btn{
+  position: absolute;
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 389px;
+  height: 156px;
+}
+.qbh-shopping-btn-main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.qbh-shopping-btn-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.qbh-shopping-btn-main img:nth-child(2) {
+  opacity: 0;
+}
+.qbh-shopping-btn-main:hover img:nth-child(2) {
+  opacity: 1;
+}
+.qbh-shopping-btn .qbh-shopping-again {
+  position: absolute;
+  top: 80px;
+  right: -177px;
+}
+.qbh-shopping-hands {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
